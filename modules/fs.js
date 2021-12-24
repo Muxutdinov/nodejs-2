@@ -35,15 +35,16 @@ const path = require("path")
 
 
 //Fileni oqish
-fs.readFile(path.join(__dirname,'Folder', "fs.js") , 'utf-8',(err,data)=>{
-    if(err) throw err
-    console.log(data);
-})
+// fs.readFile(path.join(__dirname,'Folder', "fs.js") , 'utf-8',(err,data)=>{
+//     if(err) throw err
+//     console.log(data);
+// })
 
 
 //File nomi ozgarishi
-fs.rename(path.join(__dirname,'Folder', "fs.js"),
- path.join(__dirname, 'Folder', 'namuna.js'),
+fs.rename(
+ path.join(__dirname,'/Folder', "examplee.txt"),
+ path.join(__dirname, '/Folder', 'example.txt'),
  (err)=>{
      if(err) throw err
  }
