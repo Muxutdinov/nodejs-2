@@ -21,7 +21,15 @@ const path = require('path')
 const fs = require('fs')
 
 const server = http.createServer((req,res)=>{
-
+ if(req.url === '/'){
+     const books = [
+         {name:"Clear code", auther:"Jaxongir", pages:"120"},
+         {name:"Proggram", auther:"Toxir malik", pages:"300"},
+         {name:"The JavaScript", auther:"Jaxongir", pages:"80"},
+     ]
+     res.writeHead(200,{"Content-Type":"aplication/json"})
+     res.end(JSON.stringify(books))
+ }
 })
 
 const PORT = process.env.PORT || 2000;
